@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9212927009930205079}
+  - component: {fileID: 8032773042143521895}
+  - component: {fileID: 3990032937690526259}
   m_Layer: 0
   m_Name: Glowing Stick White Change By Script
   m_TagString: Untagged
@@ -32,6 +34,49 @@ Transform:
   - {fileID: 2570016489628614211}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8032773042143521895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628590394027429576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6023c12b4b9764caef90a8a0415664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onColorChoosed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3990032937690526259}
+        m_TargetAssemblyTypeName: DFlagMono_SetMaterialColor, be.eloistree.droneracestepmesh
+        m_MethodName: SetColor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_changeColorAtAwake: 1
+--- !u!114 &3990032937690526259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628590394027429576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59630f175246f8c4d9ccb2935004aeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_whatToAffect: []
+  m_renderer:
+  - {fileID: 2539244220265574975}
 --- !u!1001 &2603134581041846696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,6 +185,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 045c7fe49f647d646931aa9eb26542ab, type: 3}
+--- !u!137 &2539244220265574975 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -8710801473360073833, guid: 045c7fe49f647d646931aa9eb26542ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 2603134581041846696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2570016489628614211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 045c7fe49f647d646931aa9eb26542ab,
