@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025934696993231711}
   m_Layer: 0
-  m_Name: DFlag
+  m_Name: DFlag Curved
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

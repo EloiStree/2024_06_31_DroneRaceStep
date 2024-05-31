@@ -3,33 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class DFlagMono_GlowingStickSize : MonoBehaviour
+public class DFlagMono_PointToPointStickPosition : MonoBehaviour
 {
+
+    public Transform m_fromAnchor;
+    public Transform m_toAnchor;
+
     public float m_sizeInMeter = 1;
     public float m_radiusMultiplication = 1;
     public Transform m_top;
     public Transform m_down;
     public Transform m_center;
 
-    public Vector3 m_rotationTopAdjustment= new Vector3(180,0,0);
-    //public float m_meshOffsetCorrection = 0.016f;
+    public Vector3 m_rotationTopAdjustment = new Vector3(180, 0, 0);
+
 
     private void Awake()
     {
-
-        RefreshSize();
+        RefreshFromSize();
     }
     private void OnValidate()
     {
-        RefreshSize();
+        RefreshFromSize();
     }
 
-    public void SetSize(float sizeInMeter) {
-        m_sizeInMeter = sizeInMeter;
-        RefreshSize();
-    }
-    private void RefreshSize()
+    public void SetSize(float sizeInMeter)
     {
+        m_sizeInMeter = sizeInMeter;
+        RefreshFromSize();
+    }
+    [ContextMenu("Refresh")]
+    private void RefreshFromSize()
+    {
+        Vector3 dir = (m_toAnchor.position -m_fromAnchor.position );
+        m_center.position = m_fromAnchor.position+ (dir / 2f);
+        m_center.up = dir.normalized;
+        m_sizeInMeter = dir.magnitude;
+
         m_top.position = m_center.position + (m_center.up * ((m_sizeInMeter / 2f)));//-m_center.up * m_meshOffsetCorrection;
         m_down.position = m_center.position - (m_center.up * ((m_sizeInMeter / 2f)));//- m_center.up * m_meshOffsetCorrection;
         m_top.localScale = Vector3.one * m_radiusMultiplication;
@@ -50,11 +60,17 @@ public class DFlagMono_GlowingStickSize : MonoBehaviour
         List<Transform> b1 = t.Where(k => k.name == "Down").ToList();
         if (b1.Count > 0)
             m_down = b1[0];
+         b1 = t.Where(k => k.name == "From").ToList();
+        if (b1.Count > 0)
+            m_fromAnchor = b1[0];
+        b1 = t.Where(k => k.name == "To").ToList();
+        if (b1.Count > 0)
+            m_toAnchor = b1[0];
         //List<Transform> bc = t.Where(k => k.name == "Armature Glowing Stick").ToList();
         //if (bc.Count > 0)
         //    m_center = bc[0];
 
-        
-        RefreshSize();
+
+        RefreshFromSize();
     }
 }
