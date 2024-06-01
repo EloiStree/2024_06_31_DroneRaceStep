@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class DFlagMono_RootTag : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [Tooltip("GUID to idenitfy in prefab what type of flag step is this prefab")]
+    public string m_flagTypeGuid;
+
+
+    public string GetGuid() { return m_flagTypeGuid; }
+
+    
+    [ContextMenu("Generate New GUID")]
+    public void GenerateNewGuid() {
+        m_flagTypeGuid = System.Guid.NewGuid().ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Reset()
     {
-        
+        GenerateNewGuid();
     }
 }
