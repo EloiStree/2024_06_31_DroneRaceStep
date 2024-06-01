@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5137941063649984642}
+  - component: {fileID: -3229732611524639860}
   m_Layer: 0
   m_Name: DFlag GR
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   - {fileID: 5174214378411347195}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3229732611524639860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7484642581363876302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f5c7ef984eaf24fae836de92ed31ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8564006310058136537
 GameObject:
   m_ObjectHideFlags: 0

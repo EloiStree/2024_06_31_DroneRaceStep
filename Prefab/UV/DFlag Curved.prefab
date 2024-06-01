@@ -41,6 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025934696993231711}
+  - component: {fileID: 4059541058932142965}
   m_Layer: 0
   m_Name: DFlag Curved
   m_TagString: Untagged
@@ -64,6 +65,18 @@ Transform:
   - {fileID: 3152531798556764103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4059541058932142965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728462145800037361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f5c7ef984eaf24fae836de92ed31ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6105447108075093904
 PrefabInstance:
   m_ObjectHideFlags: 0
