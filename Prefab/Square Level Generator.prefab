@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2430888914448480530}
-  - component: {fileID: 805755911744545794}
+  - component: {fileID: 7941645261240141672}
   m_Layer: 0
   m_Name: Awake
   m_TagString: Untagged
@@ -112,7 +112,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5146500919904439524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &805755911744545794
+--- !u!114 &7941645261240141672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,10 +121,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7056715154942779524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc885f8a54a85f84fbb641e77f2d37a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c2402bd91a990c498a79ca31306d7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_tick:
+  m_onAwake:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3554097862303205669}
@@ -139,6 +139,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_onStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8010470757068534331
 GameObject:
   m_ObjectHideFlags: 0
